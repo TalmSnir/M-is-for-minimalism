@@ -110,6 +110,28 @@ body {
     box-shadow: inset 0 0 0 2px currentColor;
   }
 }
+
+/*=============================================
+=            index            =
+=============================================*/
+.menu-link {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    block-size: 1px;
+    inline-size: 100%;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 200ms ease-in;
+    background: var(--clr-white);
+  }
+  &:is(:hover, &:focus)::before {
+    transform: scale(1);
+  }
+}
 .header {
   background: var(--clr-black-10);
   .container {
@@ -126,7 +148,7 @@ body {
     &.show {
       display: unset;
       position: absolute;
-      top: 50px;
+      top: 60px;
       right: 0;
       left: 0;
       bottom: 0;
@@ -139,24 +161,7 @@ body {
       align-items: center;
       gap: var(--spacing-md);
       font-size: var(--fs-md);
-      .header_menu_link {
-        position: relative;
-        &::before {
-          content: '';
-          position: absolute;
-          bottom: -0.2rem;
-          left: 0;
-          block-size: 1px;
-          inline-size: 100%;
-          transform: scale(0, 1);
-          transform-origin: left;
-          transition: transform 200ms ease-in;
-          background: var(--clr-white);
-        }
-        &:is(:hover, &:focus)::before {
-          transform: scale(1);
-        }
-      }
+
       .btn_purchase-header {
         background: var(--clr-white);
         color: var(--clr-black-10);
@@ -166,6 +171,7 @@ body {
   &_menu_btn {
     color: var(--clr-white);
     font-size: var(--fs-md);
+    padding: 0.4rem;
     &:hover,
     &:focus {
       outline: 1px solid var(--clr-white);
@@ -433,6 +439,33 @@ body {
         color: var(--clr-black-10);
         background: var(--clr-white);
       }
+    }
+  }
+}
+
+/*=============================================
+=            free chapter            =
+=============================================*/
+.freechapter-main {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    text-align: start;
+  }
+  &_image {
+    block-size: 200px;
+    inline-size: 340px;
+    object-fit: cover;
+  }
+  &_text {
+    &_date {
+      font-size: var(--fw-xs);
+      color: var(--clr-black-8);
+    }
+    &_paragraph {
+      margin-block-start: var(--spacing-md);
     }
   }
 }

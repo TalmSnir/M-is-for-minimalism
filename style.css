@@ -123,6 +123,36 @@ body {
           box-shadow: inset 0 0 0 2px currentColor;
 }
 
+/*=============================================
+=            index            =
+=============================================*/
+.menu-link {
+  position: relative;
+}
+
+.menu-link::before {
+  content: '';
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  block-size: 1px;
+  inline-size: 100%;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  background: var(--clr-white);
+}
+
+.menu-link:is(:hover, .menu-link:focus)::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .header {
   background: var(--clr-black-10);
 }
@@ -151,7 +181,7 @@ body {
 .header_nav.show {
   display: unset;
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 0;
   left: 0;
   bottom: 0;
@@ -175,33 +205,6 @@ body {
   font-size: var(--fs-md);
 }
 
-.header_nav_menu .header_menu_link {
-  position: relative;
-}
-
-.header_nav_menu .header_menu_link::before {
-  content: '';
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0;
-  block-size: 1px;
-  inline-size: 100%;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: -webkit-transform 200ms ease-in;
-  transition: -webkit-transform 200ms ease-in;
-  transition: transform 200ms ease-in;
-  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
-  background: var(--clr-white);
-}
-
-.header_nav_menu .header_menu_link:is(:hover, .header_nav_menu .header_menu_link:focus)::before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
 .header_nav_menu .btn_purchase-header {
   background: var(--clr-white);
   color: var(--clr-black-10);
@@ -210,6 +213,7 @@ body {
 .header_menu_btn {
   color: var(--clr-white);
   font-size: var(--fs-md);
+  padding: 0.4rem;
 }
 
 .header_menu_btn:hover, .header_menu_btn:focus {
@@ -603,5 +607,40 @@ body {
           margin-block-start: var(--spacing-md);
   color: var(--clr-black-10);
   background: var(--clr-white);
+}
+
+/*=============================================
+=            free chapter            =
+=============================================*/
+.freechapter-main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--spacing-md);
+  text-align: start;
+}
+
+.freechapter-main_image {
+  block-size: 200px;
+  inline-size: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.freechapter-main_text_date {
+  font-size: var(--fw-xs);
+  color: var(--clr-black-8);
+}
+
+.freechapter-main_text_paragraph {
+  -webkit-margin-before: var(--spacing-md);
+          margin-block-start: var(--spacing-md);
 }
 /*# sourceMappingURL=style.css.map */
