@@ -47,6 +47,29 @@
   --spacing-sm: 1rem;
   --spacing-xs: 0.5rem;
 }
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-white) var(--clr-black-10);
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--clr-black-10);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--clr-white);
+  }
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+}
 ul {
   list-style: none;
 }
@@ -82,16 +105,6 @@ p {
   font-size: var(--fs-sm);
   font-weight: var(--fw-sm);
 }
-html {
-  position: relative;
-}
-
-body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  text-align: center;
-}
-
 .container {
   padding: var(--spacing-sm);
   margin: 0 auto;
@@ -269,6 +282,9 @@ body {
           box-shadow: inset 0 0 4px var(--clr-black-3);
           border-radius: 50%;
         }
+      }
+      &_description {
+        padding: 0 var(--spacing-md);
       }
 
       &_cost {
@@ -466,6 +482,148 @@ body {
     }
     &_paragraph {
       margin-block-start: var(--spacing-md);
+    }
+  }
+}
+
+/*=============================================
+=            purchase            =
+=============================================*/
+.purchase-main {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  &_form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    font-size: var(--fs-sm);
+    button {
+      margin: var(--spacing-md) auto 0;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      text-transform: capitalize;
+      &:nth-last-child(3) {
+        margin-block-start: var(--spacing-md);
+      }
+      &.row {
+        flex-direction: row;
+        align-items: center;
+        font-size: calc(var(--fs-sm) * 0.8);
+        gap: var(--spacing-xs);
+      }
+      input[id='credit-card-ccv'] {
+        inline-size: 8ch;
+      }
+    }
+    .select-wrapper {
+      width: 100%;
+      height: 100%;
+      width: 250px;
+      //   padding: var(--spacing-sm);
+      background: red;
+      position: relative;
+      option {
+        background: #000;
+        color: red;
+        &:hover {
+          background: green;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0.2rem;
+        border-style: solid;
+        border-width: 0.4rem;
+        border-color: var(--clr-black-10) transparent transparent transparent;
+
+        pointer-events: none;
+      }
+    }
+
+    select {
+      appearance: none;
+      padding: var(--spacing-xs);
+      border-radius: 0.3rem;
+      display: block;
+      width: 100%;
+      font-size: var(--fs-sm);
+    }
+    input {
+      appearance: none;
+      border: 1px solid var(--clr-black-3);
+      font-size: inherit;
+      padding: var(--spacing-xs);
+      border-radius: 0.3rem;
+      &:hover,
+      &:focus {
+        border-color: var(--clr-black-8);
+      }
+
+      &[type='number'] {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          appearance: none;
+          margin: 0;
+        }
+
+        -moz-appearance: textfield;
+      }
+      &[type='checkbox'] {
+        block-size: 1.2rem;
+        inline-size: 1.2rem;
+        border: 1px solid var(--clr-black-10);
+        display: grid;
+        place-content: center;
+        grid-template-areas: 'check';
+        grid-area: check;
+        position: relative;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          &::after {
+            content: '';
+            grid-area: check;
+            background: var(--clr-black-1-5);
+            block-size: 100%;
+            inline-size: 100%;
+            transform: scale(2);
+            border-radius: 50%;
+            z-index: var(--z-behind);
+          }
+        }
+        transition: all 200ms;
+        &::before {
+          content: '✔';
+          grid-area: check;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          block-size: 1rem;
+          inline-size: 1rem;
+          color: var(--clr-white);
+          transition: all 200ms;
+          z-index: var(--z-top);
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:checked {
+          background: var(--clr-black-10);
+          &::before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
     }
   }
 }

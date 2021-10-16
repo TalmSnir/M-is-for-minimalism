@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -45,6 +46,32 @@
   --spacing-xs: 0.5rem;
 }
 
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-white) var(--clr-black-10);
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--clr-black-10);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--clr-white);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+}
+
 ul {
   list-style: none;
 }
@@ -88,16 +115,6 @@ button {
 p {
   font-size: var(--fs-sm);
   font-weight: var(--fw-sm);
-}
-
-html {
-  position: relative;
-}
-
-body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  text-align: center;
 }
 
 .container {
@@ -375,6 +392,10 @@ body {
   border-radius: 50%;
 }
 
+.prices_cards .price_card_description {
+  padding: 0 var(--spacing-md);
+}
+
 .prices_cards .price_card_cost {
   font-size: calc(2 * var(--fs-lg));
   font-weight: var(--fw-lg);
@@ -642,5 +663,199 @@ body {
 .freechapter-main_text_paragraph {
   -webkit-margin-before: var(--spacing-md);
           margin-block-start: var(--spacing-md);
+}
+
+/*=============================================
+=            purchase            =
+=============================================*/
+.purchase-main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.purchase-main_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: var(--fs-sm);
+}
+
+.purchase-main_form button {
+  margin: var(--spacing-md) auto 0;
+}
+
+.purchase-main_form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.2rem;
+  text-transform: capitalize;
+}
+
+.purchase-main_form label:nth-last-child(3) {
+  -webkit-margin-before: var(--spacing-md);
+          margin-block-start: var(--spacing-md);
+}
+
+.purchase-main_form label.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: calc(var(--fs-sm) * 0.8);
+  gap: var(--spacing-xs);
+}
+
+.purchase-main_form label input[id='credit-card-ccv'] {
+  inline-size: 8ch;
+}
+
+.purchase-main_form .select-wrapper {
+  width: 100%;
+  height: 100%;
+  width: 250px;
+  background: red;
+  position: relative;
+}
+
+.purchase-main_form .select-wrapper option {
+  background: #000;
+  color: red;
+}
+
+.purchase-main_form .select-wrapper option:hover {
+  background: green;
+}
+
+.purchase-main_form .select-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  border-style: solid;
+  border-width: 0.4rem;
+  border-color: var(--clr-black-10) transparent transparent transparent;
+  pointer-events: none;
+}
+
+.purchase-main_form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: var(--spacing-xs);
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%;
+  font-size: var(--fs-sm);
+}
+
+.purchase-main_form input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid var(--clr-black-3);
+  font-size: inherit;
+  padding: var(--spacing-xs);
+  border-radius: 0.3rem;
+}
+
+.purchase-main_form input:hover, .purchase-main_form input:focus {
+  border-color: var(--clr-black-8);
+}
+
+.purchase-main_form input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.purchase-main_form input[type='number']::-webkit-outer-spin-button, .purchase-main_form input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.purchase-main_form input[type='checkbox'] {
+  block-size: 1.2rem;
+  inline-size: 1.2rem;
+  border: 1px solid var(--clr-black-10);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+      grid-template-areas: 'check';
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: check;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.purchase-main_form input[type='checkbox']:hover::after, .purchase-main_form input[type='checkbox']:focus::after {
+  content: '';
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: check;
+  background: var(--clr-black-1-5);
+  block-size: 100%;
+  inline-size: 100%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  border-radius: 50%;
+  z-index: var(--z-behind);
+}
+
+.purchase-main_form input[type='checkbox']::before {
+  content: '✔';
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: check;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  block-size: 1rem;
+  inline-size: 1rem;
+  color: var(--clr-white);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  z-index: var(--z-top);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.purchase-main_form input[type='checkbox']:checked {
+  background: var(--clr-black-10);
+}
+
+.purchase-main_form input[type='checkbox']:checked::before {
+  opacity: 1;
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>purchase</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="logo header_logo">
+          <img src="./assets/logo.svg" alt="logo" />
+        </div>
+        <button class="header_menu_btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+        <nav class="header_nav">
+          <ul class="header_nav_menu">
+            <li class="header_menu_item">
+              <a href="index.html" class="header_menu_link menu-link">home</a>
+            </li>
+            <li class="header_menu_item">
+              <a href="#_" class="header_menu_link menu-link">about</a>
+            </li>
+            <li class="header_menu_item">
+              <a href="freechapter.html" class="header_menu_link menu-link"
+                >free chapter</a
+              >
+            </li>
+            <li class="header_menu_item">
+              <a
+                href="purchase.html"
+                class="header_menu_link btn_purchase btn_purchase-header"
+                >purchase the book</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="purchase-main">
+      <div class="container">
+        <img
+          src="./assets/purchaseimg.svg"
+          alt="abstract"
+          class="purchase-main_image"
+        />
+        <form class="purchase-main_form">
+          <label for="first-name">
+            first name
+            <input type="text" name="first-name" id="first-name" />
+          </label>
+          <label for="last-name">
+            last name
+            <input type="text" name="last-name" id="last-name" />
+          </label>
+          <label for="email">
+            email
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="youremail@gmail.com"
+            />
+          </label>
+          <label for="address">
+            address
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="8 street St. City, State"
+            />
+          </label>
+          <label for="phone-number">
+            phone number
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="123-456-7890"
+            />
+          </label>
+          <label for="credit-card-number">
+            credit card number<input
+              type="number"
+              name="credit-card-number"
+              id="credit-card-number"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+          </label>
+          <label for="credit-card-ccv">
+            ccv
+            <input type="number" name="credit-card-ccv" id="credit-card-ccv" />
+          </label>
+          <label for="credit-card-date">
+            expiration date
+
+            <input type="date" name="credit-card-date" id="credit-card-date" />
+          </label>
+          <label for="book-type">
+            book type
+            <div class="select-wrapper">
+              <select name="book-type" id="book-type">
+                <option value="hard copy">hard copy</option>
+                <option value="hard copy">digital copy</option>
+                <option value="hard copy">bundle pack</option>
+              </select>
+            </div>
+          </label>
+          <label for="privacy-policy" class="row">
+            <input type="checkbox" name="privacy-policy" id="privacy-policy" />
+            You agree to our friendly privacy policy.
+          </label>
+          <label for="mailing-list" class="row">
+            <input type="checkbox" name="mailing-list" id="mailing-list" />
+            You agree to receive emails from the author
+          </label>
+          <button type="submit" class="btn_purchase">commit purchase</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a href="#header" class="logo footer_logo">
+          <img loading="lazy" src="./assets/logo.svg" alt="logo" />
+        </a>
+        <nav class="footer_nav">
+          <ul class="footer_nav_menu">
+            <li class="footer_menu_item">
+              <a href="index.html" class="footer_menu_link menu-link">home</a>
+            </li>
+            <li class="footer_menu_item">
+              <a href="" class="footer_menu_link menu-link">about</a>
+            </li>
+            <li class="footer_menu_item">
+              <a href="freechapter.html" class="footer_menu_link menu-link"
+                >free chapter</a
+              >
+            </li>
+            <li class="footer_menu_item">
+              <a
+                href="purchase.html"
+                class="footer_menu_link btn_purchase btn_purchase-footer"
+                >purchase the book</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
