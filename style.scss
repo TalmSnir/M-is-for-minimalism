@@ -731,6 +731,7 @@ blockquote {
         inset: 0;
         inline-size: 100%;
         block-size: 100%;
+        min-block-size: calc(var(--fs-sm) + var(--spacing-xs) * 2);
         appearance: none;
         position: relative;
         font-size: var(--fs-sm);

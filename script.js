@@ -18,7 +18,9 @@ if (document.title === 'home') {
     img.style.transition =
       'transform 500ms ease-in-out, opacity 300ms ease 100ms';
     img.style.transform =
-      id % 2 === 0 ? 'translateX(-100%)' : 'translateX(100%)';
+      id % 2 === 0
+        ? 'translateX(-100%) translateZ(0)'
+        : 'translateX(100%) translateZ(0)';
   });
   const observer = new IntersectionObserver(
     entries => {
