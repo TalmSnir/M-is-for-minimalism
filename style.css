@@ -51,6 +51,7 @@ html {
   scrollbar-color: var(--clr-white) var(--clr-black-10);
   overflow-x: hidden;
   overflow-y: scroll;
+  font-size: 16px;
 }
 
 html::-webkit-scrollbar {
@@ -978,7 +979,6 @@ blockquote {
   min-inline-size: 212.5px;
   position: relative;
   inline-size: 100%;
-  block-size: var(--fs-sm);
   border-radius: 0.3rem;
 }
 
@@ -991,7 +991,7 @@ blockquote {
      -moz-appearance: none;
           appearance: none;
   position: relative;
-  font-size: inherit;
+  font-size: var(--fs-sm);
   font-family: inherit;
   padding-left: 2rem;
 }
