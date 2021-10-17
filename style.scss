@@ -54,6 +54,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--clr-white) var(--clr-black-10);
   overflow-x: hidden;
+  overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -68,6 +69,7 @@ html {
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   text-align: center;
   @media screen and (min-width: '840px') {
     text-align: start;
@@ -722,12 +724,14 @@ blockquote {
     .date-wrapper {
       min-inline-size: 212.5px;
       position: relative;
-      width: 100%;
+      inline-size: 100%;
+      block-size: 100%;
       border-radius: 0.3rem;
       input[type='date'] {
         position: absolute;
         inset: 0;
-        width: 100%;
+        inline-size: 100%;
+        block-size: 100%;
         appearance: none;
         position: relative;
         font-size: inherit;

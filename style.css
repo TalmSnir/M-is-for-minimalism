@@ -52,6 +52,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--clr-white) var(--clr-black-10);
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 html::-webkit-scrollbar {
@@ -69,6 +70,7 @@ html::-webkit-scrollbar-thumb {
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   text-align: center;
 }
 
@@ -977,14 +979,16 @@ blockquote {
 .purchase-main_form .date-wrapper {
   min-inline-size: 212.5px;
   position: relative;
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   border-radius: 0.3rem;
 }
 
 .purchase-main_form .date-wrapper input[type='date'] {
   position: absolute;
   inset: 0;
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
