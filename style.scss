@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  touch-action: none;
+  //   touch-action: none;
 }
 :root {
   --clr-black-10: hsl(0, 0%, 0%);
@@ -725,7 +725,7 @@ blockquote {
       min-inline-size: 212.5px;
       position: relative;
       inline-size: 100%;
-      block-size: 100%;
+      block-size: var(--fs-sm);
       border-radius: 0.3rem;
       input[type='date'] {
         position: absolute;
@@ -752,7 +752,6 @@ blockquote {
         left: 0.5rem;
         transform: translateY(-50%);
         z-index: var(--z-top);
-        // right: 0;
       }
     }
     input {

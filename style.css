@@ -7,8 +7,6 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  -ms-touch-action: none;
-      touch-action: none;
 }
 
 :root {
@@ -980,7 +978,7 @@ blockquote {
   min-inline-size: 212.5px;
   position: relative;
   inline-size: 100%;
-  block-size: 100%;
+  block-size: var(--fs-sm);
   border-radius: 0.3rem;
 }
 
