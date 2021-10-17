@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <header class="header" id='header'>
+    <header class="header" id="header">
       <div class="container">
         <div class="logo header_logo">
           <img src="./assets/logo.svg" alt="logo" />
@@ -29,15 +29,17 @@
               <a href="index.html" class="header_menu_link menu-link">home</a>
             </li>
             <li class="header_menu_item">
-              <a href="#_"class="header_menu_link menu-link">about</a>
+              <a href="#about" class="header_menu_link menu-link">about</a>
             </li>
             <li class="header_menu_item">
-              <a href="freechapter.html" class="header_menu_link menu-link">free chapter</a>
+              <a href="freechapter.html" class="header_menu_link menu-link"
+                >free chapter</a
+              >
             </li>
             <li class="header_menu_item">
               <a
                 href="purchase.html"
-                class="header_menu_link btn_purchase btn_purchase-header "
+                class="header_menu_link btn_purchase btn_purchase-header"
                 >purchase the book</a
               >
             </li>
@@ -62,11 +64,9 @@
     <section class="grid">
       <div class="container">
         <div class="grid_item item1">
-          <picture class="grid_item_image">
-            <source media="(min-width:650px)" srcset="./assets/grid-1.png" />
-            <source media="(min-width:465px)" srcset="./assets/grid-1.png" />
-            <img src="./assets/grid-1.png" alt="Flowers"  />
-          </picture>
+          <div class="grid_item_image">
+            <img src="./assets/grid-1.png" alt="chair and table" />
+          </div>
           <p class="grid_item_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ab
             ipsum cupiditate illo eum, excepturi dolor totam, fugiat cum
@@ -81,11 +81,9 @@
           </p>
         </div>
         <div class="grid_item item2">
-          <picture class="grid_item_image">
-            <source media="(min-width:650px)" srcset="./assets/grid-1.png" />
-            <source media="(min-width:465px)" srcset="./assets/grid-1.png" />
-            <img src="./assets/grid-2.png" alt="Flowers" 
-          /></picture>
+          <div class="grid_item_image">
+            <img src="./assets/grid-2.png" alt="table and plant" />
+          </div>
           <p class="grid_item_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ab
             ipsum cupiditate illo eum, excepturi dolor totam, fugiat cum
@@ -100,11 +98,9 @@
           </p>
         </div>
         <div class="grid_item item3">
-          <picture loading='lazy' class="grid_item_image">
-            <source media="(min-width:650px)" srcset="./assets/grid-1.png" />
-            <source media="(min-width:465px)" srcset="./assets/grid-1.png" />
-            <img src="./assets/grid-3.png" alt="Flowers" 
-          /></picture>
+          <div class="grid_item_image">
+            <img src="./assets/grid-3.png" alt="typewriter" />
+          </div>
           <p class="grid_item_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ab
             ipsum cupiditate illo eum, excepturi dolor totam, fugiat cum
@@ -155,11 +151,11 @@
             </div>
           </div>
           <div class="price_card">
-            <div class="price_card_icon last"><span>
-              <i class="fas fa-file-pdf"></span></i><i class="fas fa-plus"></i
-              ><span><i class="fas fa-book"></i></span>
+            <div class="price_card_icon last">
+              <span> <i class="fas fa-file-pdf"></i></span>
+              <i class="fas fa-plus"></i>
+              <span><i class="fas fa-book"></i></span>
             </div>
-
             <h3 class="price_card_title">bundle</h3>
             <span class="price_card_cost">40$</span>
             <p class="price_card_description">
@@ -167,7 +163,7 @@
               sed? Iure adipisci itaque incidunt distinctio?
             </p>
             <div class="price_card_link">
-              <a href="purchase.html" class="btn_purchase">purchase</a>
+              <a href="purchase.html" class="btn_purchase"> purchase</a>
             </div>
           </div>
         </div>
@@ -177,62 +173,110 @@
       <div class="container">
         <h1 class="testimonials_title">what people are saying</h1>
         <div class="testimonials_slider">
-            <div class="slide slide-1 active">
-                <div class="slide_title">
-                  <span class="title_name">name</span
-                  ><span class="title_job">job description</span>
-                </div>
-                <img loading='lazy' src="./assets/slide-1.png" alt="slide" class="slide_img" />
-                <div class="slide_text">
-                  <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                  <p class="slide_text_paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Distinctio iure corrupti praesentium provident blanditiis labore?
-                  </p>
-                </div>
+          <div class="slide slide-1 active">
+            <div class="left-side">
+              <div class="slide_title">
+                <span class="title_name">name</span
+                ><span class="title_job">job description</span>
               </div>
-              <div class="slide slide-2">
-                <div class="slide_title">
-                  <span class="title_name">name</span
-                  ><span class="title_job">job description</span>
-                </div>
-                <img loading='lazy' src="./assets/slide-2.png" alt="slide" class="slide_img" />
-                <div class="slide_text">
-                  <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                  <p class="slide_text_paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Distinctio iure corrupti praesentium provident blanditiis labore?
-                  </p>
-                </div>
+              <img
+                loading="lazy"
+                src="./assets/slide-1.png"
+                alt="slide"
+                class="slide_img"
+              />
+            </div>
+            <div class="slide_text">
+              <span
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i
+              ></span>
+              <blockquote class="slide_text_paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Distinctio iure corrupti praesentium provident blanditiis
+                labore?
+              </blockquote>
+            </div>
+          </div>
+          <div class="slide slide-2">
+            <div class="left-side">
+              <div class="slide_title">
+                <span class="title_name">name</span
+                ><span class="title_job">job description</span>
               </div>
-              <div class="slide slide-3">
-                <div class="slide_title">
-                  <span class="title_name">name</span
-                  ><span class="title_job">job description</span>
-                </div>
-                <img  loading='lazy' src="./assets/slide-3.png" alt="slide" class="slide_img" />
-                <div class="slide_text">
-                  <span><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                  <p class="slide_text_paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Distinctio iure corrupti praesentium provident blanditiis labore?
-                  </p>
-                </div>
+              <img
+                loading="lazy"
+                src="./assets/slide-2.png"
+                alt="slide"
+                class="slide_img"
+              />
+            </div>
+            <div class="slide_text">
+              <span
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i
+              ></span>
+              <blockquote class="slide_text_paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Distinctio iure corrupti praesentium provident blanditiis
+                labore?
+              </blockquote>
+            </div>
+          </div>
+          <div class="slide slide-3">
+            <div class="left-side">
+              <div class="slide_title">
+                <span class="title_name">name</span
+                ><span class="title_job">job description</span>
               </div>
-              <div class="slide slide-4">
-                <div class="slide_title">
-                  <span class="title_name">name</span
-                  ><span class="title_job">job description</span>
-                </div>
-                <img loading='lazy' src="./assets/slide-4.png" alt="slide" class="slide_img" />
-                <div class="slide_text">
-                  <span><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                  <p class="slide_text_paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Distinctio iure corrupti praesentium provident blanditiis labore?
-                  </p>
-                </div>
+              <img
+                loading="lazy"
+                src="./assets/slide-3.png"
+                alt="slide"
+                class="slide_img"
+              />
+            </div>
+            <div class="slide_text">
+              <span
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i
+              ></span>
+              <blockquote class="slide_text_paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Distinctio iure corrupti praesentium provident blanditiis
+                labore?
+              </blockquote>
+            </div>
+          </div>
+          <div class="slide slide-4">
+            <div class="left-side">
+              <div class="slide_title">
+                <span class="title_name">name</span
+                ><span class="title_job">job description</span>
               </div>
+              <img
+                loading="lazy"
+                src="./assets/slide-4.png"
+                alt="slide"
+                class="slide_img"
+              />
+            </div>
+            <div class="slide_text">
+              <span
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i
+              ></span>
+              <blockquote class="slide_text_paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Distinctio iure corrupti praesentium provident blanditiis
+                labore?
+              </blockquote>
+            </div>
+          </div>
           <div class="slider_controls">
             <button class="slider_controls_back slider_control">
               <i class="fas fa-arrow-left"></i></button
@@ -240,14 +284,14 @@
               <i class="fas fa-arrow-right"></i>
             </button>
           </div>
-          
+
           <div class="slider_position">
-            <span class='active'></span><span></span><span></span><span></span>
+            <span class="active"></span><span></span><span></span><span></span>
           </div>
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about_text">
           <h1 class="about_text_title">About the author</h1>
@@ -261,17 +305,17 @@
             modi commodi magnam rerum architecto! Dolorum similique repellendus
           </p>
         </div>
-        <picture loading='lazy'  class="about_image">
+        <picture loading="lazy" class="about_image">
           <source media="(min-width:650px)" srcset="./assets/grid-1.png" />
           <source media="(min-width:465px)" srcset="./assets/grid-1.png" />
-          <img src="./assets/aboutimg.png" alt="Flowers"  />
+          <img src="./assets/aboutimg.png" alt="Flowers" />
         </picture>
       </div>
     </section>
     <footer class="footer">
       <div class="container">
-        <a href='#header' class="logo footer_logo">
-          <img loading='lazy' src="./assets/logo.svg" alt="logo" />
+        <a href="#header" class="logo footer_logo">
+          <img loading="lazy" src="./assets/logo.svg" alt="logo" />
         </a>
         <nav class="footer_nav">
           <ul class="footer_nav_menu">
@@ -279,22 +323,23 @@
               <a href="index.html" class="footer_menu_link menu-link">home</a>
             </li>
             <li class="footer_menu_item">
-              <a href="" class="footer_menu_link menu-link">about</a>
+              <a href="#about" class="footer_menu_link menu-link">about</a>
             </li>
             <li class="footer_menu_item">
-              <a href="freechapter.html" class="footer_menu_link menu-link">free chapter</a>
-            </li>
-            <li class="footer_menu_item">
-              <a
-                href="purchase.html"
-                class="footer_menu_link btn_purchase btn_purchase-footer"
-                >purchase the book</a
+              <a href="freechapter.html" class="footer_menu_link menu-link"
+                >free chapter</a
               >
             </li>
           </ul>
         </nav>
+
+        <a
+          href="purchase.html"
+          class="footer_menu_link btn_purchase btn_purchase-footer"
+          >purchase the book</a
+        >
       </div>
     </footer>
-    <script src='script.js'></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -74,3 +74,17 @@ function closeHeaderNav(e) {
 }
 menuBtn.addEventListener('click', toggleHeaderNav);
 headerNav.addEventListener('click', closeHeaderNav);
+
+// !TODO :
+// [] add form validation
+// [] change font -sizes-queries
+// [] change select and date inputs
+
+if (document.title === 'purchase') {
+  const form = document.querySelector('form');
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+  }
+  form.addEventListener('submit', handleFormSubmit);
+}
